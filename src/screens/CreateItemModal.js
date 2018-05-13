@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Amplify, { API } from 'aws-amplify';
-import { Form, Modal, Button, Container } from 'semantic-ui-react';
+import { API } from 'aws-amplify';
+import { Form, Modal, Button } from 'semantic-ui-react';
 
 const uuidv1 = require('uuid/v1');
 
@@ -31,12 +31,8 @@ class CreateItemModal extends Component {
     }
 
     API.post(apiName, path, newItem)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      .then(response => console.log(response))
+      .catch(err => console.log(err));
 
     this.props.getItems()
     this.handleClose();
