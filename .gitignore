@@ -26,5 +26,7 @@ aws-info.json
 project-info.json
 aws-exports.*
 awsmobilejs/.awsmobile/backend-build
+awsmobilejs/backend/cloud-api/ServerlessWebApp/node_modules
+awsmobilejs/backend/cloud-api/sampleLambda/node_modules
 awsmobilejs/\#current-backend-info
 ~awsmobilejs-*/
