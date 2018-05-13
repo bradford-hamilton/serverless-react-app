@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import aws_exports from './aws-exports';
+import Amplify, { API } from 'aws-amplify';
+import { Segment, Menu, Icon } from 'semantic-ui-react';
+import ItemDashboard from './screens/ItemDashboard';
 import './App.css';
 
+Amplify.configure(aws_exports);
+
+let apiName = 'ServerlessWebAppCRUD';
+let path = '/ServerlessWebApp';
+
 class App extends Component {
+  componentDidMount() {
+    API.get(apiName, path).then(res => console.log(res));
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Segment>
+        <Menu>
+          <Menu.Item name='home'><Icon name="shop"/></Menu.Item>
+          <Menu.Item name='Items'/>
+          <Menu.Item name='aboutUs' />
+        </Menu>
+        <ItemDashboard />
+      </Segment>
     );
   }
 }
