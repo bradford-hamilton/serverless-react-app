@@ -30,8 +30,6 @@ class CreateItemModal extends Component {
       }
     }
 
-    console.log(newItem);
-
     API.post(apiName, path, newItem)
       .then(response => {
         console.log(response);
@@ -40,6 +38,7 @@ class CreateItemModal extends Component {
         console.log(err);
       });
 
+    this.props.getItems()
     this.handleClose();
   }
 
