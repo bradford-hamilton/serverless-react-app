@@ -47,7 +47,7 @@ class ItemDashboard extends Component {
                     {name}
                   </Card.Header>
                   <Card.Meta>
-                    £ {price}
+                    $ {price}
                   </Card.Meta>
                   <Card.Description>
                     {description}

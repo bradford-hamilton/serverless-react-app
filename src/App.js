@@ -19,7 +19,9 @@ class App extends Component {
     return (
       <Segment>
         <Menu>
-          <Menu.Item name='home'><Icon name="shop"/></Menu.Item>
+          <Menu.Item name='home'>
+            <Icon name="shop"/>
+          </Menu.Item>
           <Menu.Item name='Items'/>
           <Menu.Item name='aboutUs' />
         </Menu>

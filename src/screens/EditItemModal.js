@@ -80,7 +80,7 @@ class EditItemModal extends Component {
                 <Form.Input
                   name="itemPrice"
                   label="Item Price"
-                  placeholder="£0.00"
+                  placeholder="$0.00"
                   onChange={this.handleChange}
                   value={this.state.itemPrice}
                 />
